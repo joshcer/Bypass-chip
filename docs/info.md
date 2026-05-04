@@ -17,7 +17,7 @@ This project is a Universal Bypass Manager with Hysteresis a microchip designed 
 
 To test this design on the physical demonstration board or in simulation use the input switches and observe the output LEDs with the following Pin Configuration where IN0 Switch 1 simulates connecting the charger 1 equals connected 0 equals disconnected while IN1 Switch 2 represents the upper limit sensor 1 equals battery reached 80% and IN2 Switch 3 represents the lower limit sensor 1 equals battery dropped to 75% alongside OUT0 Green LED for the Charge command which closes the circuit to the battery and OUT1 Blue LED for the Bypass command which isolates the battery and routes power to the main board To perform the hysteresis test follow these steps starting with Power On by activating IN0 Charger ON and IN2 Bat $\le$ 75% which should turn on OUT0 Green then move to Rising Charge by turning off IN2 simulating 78% where OUT0 Green must stay on due to the memory state followed by the Goal Bypass phase by activating IN1 Bat $\ge$ 80% causing OUT0 to turn off and OUT1 Blue to turn on and finally the key Hysteresis Test by turning off IN1 simulating a drop to 79% where OUT1 Blue must remain on as the system refuses to charge for a 1% loss until the Cycle Reset occurs by activating IN2 again to restart the process and turn OUT0 back on
 
-![Diagrama con salidas conectadas](IMG_20260423_195008.png)
+![Diagrama con salidas conectadas](diagrama1.png)
 
 ## External hardware
 
